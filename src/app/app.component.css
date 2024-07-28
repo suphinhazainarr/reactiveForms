@@ -1,0 +1,644 @@
+.error{
+    color: red;
+    font-size: 13px;
+}
+.touched-invalid {
+    border: 2px solid red;
+  }
+  
+  .touched-valid {
+    border: 2px solid green;
+  }
+  
+  .pristine {
+    background-color: #f5f5f5;
+  }
+  
+  .dirty {
+    background-color: #e0e0e0;
+  }
+  
+  .state {
+    font-size: 12px;
+    color: #666;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Optional: Add a background color to the body */
+}
+
+.container {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Use your desired gradient */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 110%;
+    box-sizing: border-box;
+}
+
+  
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 2rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="checkbox"] {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  input[type="checkbox"] {
+    width: auto;
+  }
+  
+  .state {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.5rem;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.8rem;
+  }
+  
+  .touched-invalid {
+    border: 2px solid red;
+  }
+  
+  .touched-valid {
+    border: 2px solid green;
+  }
+  
+  .pristine {
+    background-color: #f5f5f5;
+  }
+  
+  .dirty {
+    background-color: #e0e0e0;
+  }
+  
+  button {
+    background-color: #ff7e5f;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  button:hover {
+    background-color: #feb47b;
+  }
+  
+  .success-message,
+  .error-message {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: green;
+  }
+  
+  .error-message {
+    color: red;
+  }
+  
+  .success-message h1,
+  .error-message h1 {
+    margin: 0;
+  }
+  .phone-group {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .phone-entry {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .phone-entry label {
+    flex: 1;
+    margin-right: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .phone-entry input {
+    width: 60%;  /* Reduced width */
+    max-width: 400px;  /* Set a max-width */
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-right: 20px;
+  }
+  
+  .phone-entry .remove-button {
+    background-color: #ff7e5f;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .phone-entry .remove-button:hover {
+    background-color: #feb47b;
+  }
+  
+  .add-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: block;
+    margin-top: 1rem;
+  }
+  
+  .add-button:hover {
+    background-color: #45a049;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+  }
+    /* Container styling for the email section */
+.email-group {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Label styling */
+  .email-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Input box styling */
+  .email-group input {
+    width: 80%;  /* Reduced width */
+    max-width: 400px;  /* Set a max-width */
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Input focus styling */
+  .email-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  
+  /* Invalid input styling */
+  .email-group input.ng-invalid.ng-touched {
+    border-color: #dc3545;
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+  }
+  
+  /* Valid input styling */
+  .email-group input.ng-valid.ng-touched {
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+  }
+  
+  /* State message styling */
+  .email-group .state {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.25rem;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Error message styling */
+  .email-group .error {
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+
+
+
+  /* Container styling for the age section */
+.age-group {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Label styling */
+  .age-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #343a40;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Input box styling */
+  .age-group input {
+    width: 80%;  /* Reduced width */
+    max-width: 400px;  /* Set a max-width */
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Input focus styling */
+  .age-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  
+  /* Invalid input styling */
+  .age-group input.ng-invalid.ng-touched {
+    border-color: #dc3545;
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+  }
+  
+  /* Valid input styling */
+  .age-group input.ng-valid.ng-touched {
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+  }
+  
+  /* State message styling */
+  .age-group .state {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-top: 0.25rem;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Error message styling */
+  .age-group .error {
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    font-family: 'Roboto', sans-serif;
+  }
+/* Container styling for the user name section */
+.user-name-group {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Label styling */
+  .user-name-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #0d47a1;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Input box styling */
+  .user-name-group input {
+    width: 80%;  /* Reduced width */
+    max-width: 400px;  /* Set a max-width */
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Input focus styling */
+  .user-name-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  
+  /* Invalid input styling */
+  .user-name-group input.ng-invalid.ng-touched {
+    border-color: #dc3545;
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+  }
+  
+  /* Valid input styling */
+  .user-name-group input.ng-valid.ng-touched {
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+  }
+  
+  /* State message styling */
+  .user-name-group .state {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.25rem;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Error message styling */
+  .user-name-group .error {
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    font-family: 'Roboto', sans-serif;
+  }
+/* Container styling for the password section */
+.password-group {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Label styling */
+  .password-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #0d47a1;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Input box styling */
+  .password-group input {
+    width: 80%;  /* Reduced width */
+    max-width: 400px;  /* Set a max-width */
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Input focus styling */
+  .password-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  
+  /* Invalid input styling */
+  .password-group input.ng-invalid.ng-touched {
+    border-color: #dc3545;
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+  }
+  
+  /* Valid input styling */
+  .password-group input.ng-valid.ng-touched {
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+  }
+  
+  /* State message styling */
+  .password-group .state {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.25rem;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Error message styling */
+  .password-group .error {
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    font-family: 'Roboto', sans-serif;
+  }
+      /* Container styling for the confirm password section */
+.confirm-password-group {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Label styling */
+  .confirm-password-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #0d47a1;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Input box styling */
+  .confirm-password-group input {
+    width: 80%;  /* Reduced width */
+    max-width: 400px;  /* Set a max-width */
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Input focus styling */
+  .confirm-password-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  
+  /* Invalid input styling */
+  .confirm-password-group input.ng-invalid.ng-touched {
+    border-color: #dc3545;
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+  }
+  
+  /* Valid input styling */
+  .confirm-password-group input.ng-valid.ng-touched {
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+  }
+  
+  /* State message styling */
+  .confirm-password-group .state {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.25rem;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Error message styling */
+  .confirm-password-group .error {
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    font-family: 'Roboto', sans-serif;
+  }
+  /* Container styling for the address form section */
+.address-form-group {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Heading styling */
+  .address-form-group h3 {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.5rem;
+  }
+  
+  /* Label styling */
+  .address-form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  /* Input box styling */
+  .address-form-group input {
+    width: 90%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 1rem;
+  }
+  
+  /* Input focus styling */
+  .address-form-group input:focus {
+    border-color: #fd7e14;
+    box-shadow: 0 0 5px rgba(253, 126, 20, 0.5);
+    outline: none;
+  }
+  
+  /* Invalid input styling */
+  .address-form-group input.ng-invalid.ng-touched {
+    border-color: #dc3545;
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+  }
+  
+  /* Valid input styling */
+  .address-form-group input.ng-valid.ng-touched {
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+  }
+  
+  /* State message styling */
+  .address-form-group .state {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Error message styling */
+  .address-form-group .error {
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Button styling for submit button */
+  .submit-button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Button hover effect for submit button */
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
